@@ -12,7 +12,7 @@ def get_requirements(file_path: str) -> List[str]:
         requirements = file_obj.readlines()
         requirements = [req.replace("\n", "") for req in requirements]
 
-        if HYPEN_E_DOT in requirements:   # ✅ colon added
+        if HYPEN_E_DOT in requirements:   
             requirements.remove(HYPEN_E_DOT)
     return requirements
 
@@ -21,5 +21,5 @@ setup(
     version='0.0.1',
     author='Sanjay',
     packages=find_packages(),
-    install_requires=get_requirements('requirements.txt')   # ✅ correct spelling
+    install_requires=get_requirements('requirements.txt')   
 )
